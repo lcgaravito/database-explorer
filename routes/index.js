@@ -3,9 +3,7 @@ const router = express.Router();
 
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
-const uri = "mongodb+srv://admin:admin@cluster0-twpse.mongodb.net/test?retryWrites=true&w=majority";
-
-// const Banio = require('../models/banios');
+const uri = "mongodb+srv://<user>:<password>@cluster0-twpse.mongodb.net/test?retryWrites=true&w=majority";
 
 router.get('/', (req, res) => {
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
