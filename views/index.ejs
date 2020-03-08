@@ -12,29 +12,38 @@
 
     <h1>Mongo Explorer</h1>
     <div class="row">
-        <div class="col">
+        <div class="col-4">
             <label for="db">DB</label>
-            <select id="db" name="db">
+            <select id="db" name="db" onchange="reloadCollections()">
                 <% for( let i = 0; i < databases.length; i++ ) { %>
-                    <option value="value1"><%= databases[i].name %></option> 
+                    <option value="<%= databases[i].name %>"><%= databases[i].name %></option> 
                 <% } %>
-                <option value="value2" selected>-- Select an option --</option>
               </select>
             <br>
             <label for="collection">Collection</label>
-            <select id="collection" name="collection">
-                <option value="value1">Value 1</option> 
-                <option value="value2" selected>Value 2</option>
-                <option value="value3">Value 3</option>
-              </select>
+            <select id="collection" name="collection" onchange="reloadRecords()">
+            </select>
         </div>
-
+        <div class="col-8">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Content</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody id="records">
+                </tbody>
+            </table>
+        </div>
     </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

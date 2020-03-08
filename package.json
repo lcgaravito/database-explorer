@@ -1,25 +1,27 @@
 {
-  "name": "database-explorer",
-  "version": "1.0.0",
-  "description": "Explorador de colecciones y bases de datos de un servidor.",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lcgaravito/database-explorer.git"
-  },
-  "author": "Luis Carlos Garavito Romero",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lcgaravito/database-explorer/issues"
-  },
-  "homepage": "https://github.com/lcgaravito/database-explorer#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "mongodb": "^3.5.4"
-  }
+    "name": "database-explorer",
+    "version": "1.0.0",
+    "description": "Explorador de colecciones y bases de datos de un servidor.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app",
+        "nodemon": "nodemon app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lcgaravito/database-explorer.git"
+    },
+    "author": "Luis Carlos Garavito Romero",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lcgaravito/database-explorer/issues"
+    },
+    "homepage": "https://github.com/lcgaravito/database-explorer#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "mongodb": "^3.5.4"
+    }
 }
